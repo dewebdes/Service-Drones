@@ -1,0 +1,78 @@
+CREATE TABLE wp_cu_device (
+  id mediumint(9) NOT NULL AUTO_INCREMENT,
+  sid mediumint(9) NOT NULL,
+  ownerTbl mediumint(9) NOT NULL DEFAULT '0',
+  ownerRec mediumint(9) NOT NULL DEFAULT '0',
+  isSingle tinyint(1) NOT NULL DEFAULT '1',
+  isExist tinyint(1) NOT NULL DEFAULT '0',
+  isNew tinyint(1) NOT NULL DEFAULT '0',
+  lastip tinytext COLLATE utf8mb4_unicode_ci,
+  prj tinytext COLLATE utf8mb4_unicode_ci,
+  dtkn longtext COLLATE utf8mb4_unicode_ci,
+  dsys tinytext COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+
+
+
+
+CREATE TABLE wp_cu_user (
+  id mediumint(9) NOT NULL AUTO_INCREMENT,
+  sid mediumint(9) NOT NULL,
+  ownerTbl mediumint(9) NOT NULL DEFAULT '0',
+  ownerRec mediumint(9) NOT NULL DEFAULT '0',
+  isSingle tinyint(1) NOT NULL DEFAULT '1',
+  isExist tinyint(1) NOT NULL DEFAULT '0',
+  isNew tinyint(1) NOT NULL DEFAULT '0',
+  devid tinytext COLLATE utf8mb4_unicode_ci,
+  duser tinytext COLLATE utf8mb4_unicode_ci,
+  dpass tinytext COLLATE utf8mb4_unicode_ci,
+  project tinytext COLLATE utf8mb4_unicode_ci,
+  authtyp tinytext COLLATE utf8mb4_unicode_ci,
+  lastlogin tinytext COLLATE utf8mb4_unicode_ci,
+  dfullname tinytext COLLATE utf8mb4_unicode_ci,
+  dtel tinytext COLLATE utf8mb4_unicode_ci,
+  dmail tinytext COLLATE utf8mb4_unicode_ci,
+  dava longtext COLLATE utf8mb4_unicode_ci,
+  profi longtext COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+
+
+
+
+
+CREATE TABLE wp_sam_client (
+  id mediumint(9) NOT NULL AUTO_INCREMENT,
+  sid mediumint(9) NOT NULL,
+  ownerTbl mediumint(9) NOT NULL DEFAULT '0',
+  ownerRec mediumint(9) NOT NULL DEFAULT '0',
+  isSingle tinyint(1) NOT NULL DEFAULT '1',
+  isExist tinyint(1) NOT NULL DEFAULT '0',
+  isNew tinyint(1) NOT NULL DEFAULT '0',
+  wifipass tinytext COLLATE utf8mb4_unicode_ci,
+  wifius tinytext COLLATE utf8mb4_unicode_ci,
+  hubip tinytext COLLATE utf8mb4_unicode_ci,
+  devid tinytext COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+
+
+
+
+
+
+CREATE TABLE wp_sam_logs (
+  id mediumint(9) NOT NULL AUTO_INCREMENT,
+  sid mediumint(9) NOT NULL,
+  ownerTbl mediumint(9) NOT NULL DEFAULT '0',
+  ownerRec mediumint(9) NOT NULL DEFAULT '0',
+  isSingle tinyint(1) NOT NULL DEFAULT '1',
+  isExist tinyint(1) NOT NULL DEFAULT '0',
+  isNew tinyint(1) NOT NULL DEFAULT '0',
+  dtime tinytext COLLATE utf8mb4_unicode_ci,
+  dentry longtext COLLATE utf8mb4_unicode_ci,
+  deviceid tinytext COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1951 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+
